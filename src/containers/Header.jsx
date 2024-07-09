@@ -8,6 +8,7 @@ import Arrow from "../Assets/Icons/Arrow";
 import MenuItem from "../components/Header/MenuItem";
 import { Divide as Hamburger } from "hamburger-react";
 import "../styles/upperHeader.css";
+import { Link } from "react-router-dom";
 
 const Header = () => {
   const [isOpen, setOpen] = useState(false);
@@ -96,14 +97,16 @@ const Header = () => {
                     Rewards
                   </a>
                 </li>
-                <li>
-                  <a
-                    href="https://www.starbucks.com/gift"
-                    className="text-left block py-[1.6rem] px-[3.2rem] w-full text-[1.9rem] decoration-none md:text-[2.4rem]"
-                  >
-                    Gift Cards
-                  </a>
-                </li>
+                <Link to="/gift">
+                  <li>
+                    <a
+                      href="/gift"
+                      className="text-left block py-[1.6rem] px-[3.2rem] w-full text-[1.9rem] decoration-none md:text-[2.4rem]"
+                    >
+                      Gift Cards
+                    </a>
+                  </li>
+                </Link>
               </ul>
             </div>
             <hr

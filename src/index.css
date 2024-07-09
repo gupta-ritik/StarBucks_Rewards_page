@@ -23,7 +23,7 @@ html {
 body {
   font-size: 1.4rem;
   letter-spacing: -0.01rem;
-  /* background-color: black; */
+  /* background-color: grey; */
 }
 
 code {
@@ -56,6 +56,7 @@ code {
 .slick-slide > div {
   margin: 0 10px;
 }
+
 @media (min-width: 768px) {
   body {
     font-size: 1.6rem;
