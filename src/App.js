@@ -1,23 +1,38 @@
-import logo from './logo.svg';
-import './App.css';
+import LowerHeader from "./components/Header/LowerHeader";
+import ExtrasContainer from "./containers/ExtrasSection/ExtrasContainer";
+import Header from "./containers/Header";
+import MainDesktop from "./containers/JoinContainer/MainDesktop";
+import StartedSection from "./containers/StartedContainer/StartedSection";
+import CashContainer from "./containers/CashContainer/CashContainer";
+import QuestionContainer from "./containers/QuestionsContainer/QuestionContainer";
+import StarTermsContainer from "./containers/StarTermsContainer/StarTermsContainer";
+import Footer from "./containers/Footer";
+import StarCodesContainer from "../src/containers/StarCodesContainer/StarCodesContainer";
+import MainMobile from "./containers/JoinContainer/MainMobile";
+import FavoritesContainer from "./containers/FavoritesContainer/FavoritesContainer";
+import "./App.css";
+import Carousel from "./components/Carousel/Carousel";
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <Header />
+      <LowerHeader />
+      <Carousel />
+      <section className="present">
+        <div className="mb-[72px] md:mb-[128px]">
+          <MainDesktop />
+          <MainMobile />
+        </div>
+        <StartedSection />
+        <FavoritesContainer />
+        <ExtrasContainer />
+        <CashContainer />
+        <StarCodesContainer />
+        <QuestionContainer />
+        <StarTermsContainer />
+        <Footer />
+      </section>
     </div>
   );
 }
